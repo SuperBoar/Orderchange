@@ -1,0 +1,11 @@
+2025-08-01 17:14:39,197 - werkzeug - WARNING -  * Debugger is active!
+2025-08-01 17:14:39,204 - werkzeug - INFO -  * Debugger PIN: 141-886-190
+2025-08-01 17:14:42,725 - werkzeug - INFO - 127.0.0.1 - - [01/Aug/2025 17:14:42] "GET / HTTP/1.1" 200 -
+2025-08-01 17:14:42,738 - werkzeug - INFO - 127.0.0.1 - - [01/Aug/2025 17:14:42] "[33mGET /static/css/style.css HTTP/1.1[0m" 404 -
+2025-08-01 17:14:42,740 - werkzeug - INFO - 127.0.0.1 - - [01/Aug/2025 17:14:42] "[33mGET /static/js/main.js HTTP/1.1[0m" 404 -
+2025-08-01 17:14:45,541 - werkzeug - INFO - 127.0.0.1 - - [01/Aug/2025 17:14:45] "GET / HTTP/1.1" 200 -
+2025-08-01 17:14:45,554 - werkzeug - INFO - 127.0.0.1 - - [01/Aug/2025 17:14:45] "[33mGET /static/css/style.css HTTP/1.1[0m" 404 -
+2025-08-01 17:14:45,554 - werkzeug - INFO - 127.0.0.1 - - [01/Aug/2025 17:14:45] "[33mGET /static/js/main.js HTTP/1.1[0m" 404 -
+2025-08-01 17:14:48,118 - werkzeug - INFO - 127.0.0.1 - - [01/Aug/2025 17:14:48] "GET / HTTP/1.1" 200 -
+2025-08-01 17:14:48,127 - werkzeug - INFO - 127.0.0.1 - - [01/Aug/2025 17:14:48] "[33mGET /static/css/style.css HTTP/1.1[0m" 404 -
+2025-08-01 17:14:48,133 - werkzeug - INFO - 127.0.0.1 - - [01/Aug/2025 17:14:48] "[33mGET /static/js/main.js HTTP/1.1[0m" 404 -

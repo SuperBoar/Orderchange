@@ -1,0 +1,127 @@
+2025-08-01 17:17:38,320 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.112.110:5000
+2025-08-01 17:17:38,321 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-08-01 17:17:38,323 - werkzeug - INFO -  * Restarting with stat
+2025-08-01 17:17:38,725 - werkzeug - WARNING -  * Debugger is active!
+2025-08-01 17:17:38,734 - werkzeug - INFO -  * Debugger PIN: 141-886-190
+2025-08-01 17:17:40,818 - werkzeug - INFO - 127.0.0.1 - - [01/Aug/2025 17:17:40] "GET / HTTP/1.1" 200 -
+2025-08-01 17:17:41,039 - werkzeug - INFO - 127.0.0.1 - - [01/Aug/2025 17:17:41] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-08-01 17:17:41,050 - werkzeug - INFO - 127.0.0.1 - - [01/Aug/2025 17:17:41] "GET /static/js/main.js HTTP/1.1" 200 -
+2025-08-01 17:18:01,916 - root - INFO - ¿ªÊ¼Ö´ÐÐµÇÂ¼²Ù×÷
+2025-08-01 17:18:02,050 - root - INFO - µÇÂ¼³É¹¦£¬ÏìÓ¦Êý¾Ý£º{'code': 0, 'message': '²Ù×÷³É¹¦', 'data': {'is_admin': 1, 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NTQwNTQyODAsImlhdCI6MTc1NDAzOTg4MCwiaXNfYWRtaW4iOjEsImlzc3VlciI6ImdvY3JvbiIsInVpZCI6MTMsInVzZXJuYW1lIjoieHVzaGFuZ2NodWFuZyJ9.8erv6e0iTBFmLmqefHA7S5tYNipFTFuyH67Bd2r0NX0', 'uid': 13, 'username': 'xushangchuang'}}
+2025-08-01 17:18:02,050 - root - INFO - ¿ªÊ¼Ö´ÐÐµÇÂ¼²Ù×÷
+2025-08-01 17:18:02,174 - root - INFO - µÇÂ¼³É¹¦£¬ÏìÓ¦Êý¾Ý£º<Response [200]>
+2025-08-01 17:18:02,174 - root - INFO - CookieÍ·ÐÅÏ¢: XXL_JOB_LOGIN_IDENTITY=7b226964223a312c22757365726e616d65223a2261646d696e222c2270617373776f7264223a226531306164633339343962613539616262653536653035376632306638383365222c22726f6c65223a312c227065726d697373696f6e223a6e756c6c7d
+2025-08-01 17:18:02,175 - werkzeug - INFO - 127.0.0.1 - - [01/Aug/2025 17:18:02] "POST /login HTTP/1.1" 200 -
+2025-08-01 17:18:31,082 - utils.public - INFO - ³¢ÊÔÖØÐÂÁ¬½ÓÊý¾Ý¿â...
+2025-08-01 17:18:31,276 - utils.public - INFO - Êý¾Ý¿âÖØÁ¬³É¹¦£¡
+2025-08-01 17:18:31,295 - utils.public - INFO - Êý¾Ý¿âÁ¬½ÓÕý³£¡£
+2025-08-01 17:18:31,370 - utils.public - INFO - SQLÓï¾äÖ´ÐÐ³É¹¦
+2025-08-01 17:18:31,389 - werkzeug - INFO - 127.0.0.1 - - [01/Aug/2025 17:18:31] "POST /execute_scenario HTTP/1.1" 200 -
+2025-08-01 17:18:55,688 - utils.public - INFO - ³¢ÊÔÖØÐÂÁ¬½ÓÊý¾Ý¿â...
+2025-08-01 17:18:56,321 - utils.public - INFO - Êý¾Ý¿âÖØÁ¬³É¹¦£¡
+2025-08-01 17:18:56,337 - utils.public - INFO - Êý¾Ý¿âÁ¬½ÓÕý³£¡£
+2025-08-01 17:18:56,459 - utils.public - INFO - SQLÓï¾äÖ´ÐÐ³É¹¦
+2025-08-01 17:18:56,517 - werkzeug - INFO - 127.0.0.1 - - [01/Aug/2025 17:18:56] "POST /execute_scenario HTTP/1.1" 200 -
+2025-08-01 17:19:34,757 - utils.public - INFO - ³¢ÊÔÖØÐÂÁ¬½ÓÊý¾Ý¿â...
+2025-08-01 17:19:34,862 - utils.public - INFO - Êý¾Ý¿âÖØÁ¬³É¹¦£¡
+2025-08-01 17:19:34,878 - utils.public - INFO - Êý¾Ý¿âÁ¬½ÓÕý³£¡£
+2025-08-01 17:19:35,020 - utils.public - INFO - SQLÓï¾äÖ´ÐÐ³É¹¦
+2025-08-01 17:19:35,037 - werkzeug - INFO - 127.0.0.1 - - [01/Aug/2025 17:19:35] "POST /execute_scenario HTTP/1.1" 200 -
+2025-08-01 17:20:08,864 - werkzeug - INFO - 192.168.112.34 - - [01/Aug/2025 17:20:08] "GET / HTTP/1.1" 200 -
+2025-08-01 17:20:08,887 - werkzeug - INFO - 192.168.112.34 - - [01/Aug/2025 17:20:08] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-08-01 17:20:08,893 - werkzeug - INFO - 192.168.112.34 - - [01/Aug/2025 17:20:08] "GET /static/js/main.js HTTP/1.1" 200 -
+2025-08-01 17:20:10,652 - werkzeug - INFO - 192.168.112.34 - - [01/Aug/2025 17:20:10] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-08-01 17:20:29,969 - root - INFO - ¿ªÊ¼Ö´ÐÐµÇÂ¼²Ù×÷
+2025-08-01 17:20:30,016 - root - INFO - µÇÂ¼³É¹¦£¬ÏìÓ¦Êý¾Ý£º{'code': 0, 'message': '²Ù×÷³É¹¦', 'data': {'is_admin': 1, 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NTQwNTQ0MjgsImlhdCI6MTc1NDA0MDAyOCwiaXNfYWRtaW4iOjEsImlzc3VlciI6ImdvY3JvbiIsInVpZCI6MTMsInVzZXJuYW1lIjoieHVzaGFuZ2NodWFuZyJ9.J9_qlFL3cB-zrUpzCXC_JEMHGM-urRA2pmKcI0nu6jI', 'uid': 13, 'username': 'xushangchuang'}}
+2025-08-01 17:20:30,016 - root - INFO - ¿ªÊ¼Ö´ÐÐµÇÂ¼²Ù×÷
+2025-08-01 17:20:30,069 - root - INFO - µÇÂ¼³É¹¦£¬ÏìÓ¦Êý¾Ý£º<Response [200]>
+2025-08-01 17:20:30,070 - root - INFO - CookieÍ·ÐÅÏ¢: XXL_JOB_LOGIN_IDENTITY=7b226964223a312c22757365726e616d65223a2261646d696e222c2270617373776f7264223a226531306164633339343962613539616262653536653035376632306638383365222c22726f6c65223a312c227065726d697373696f6e223a6e756c6c7d
+2025-08-01 17:20:30,071 - werkzeug - INFO - 192.168.112.34 - - [01/Aug/2025 17:20:30] "POST /login HTTP/1.1" 200 -
+2025-08-01 17:21:14,229 - utils.public - INFO - ³¢ÊÔÖØÐÂÁ¬½ÓÊý¾Ý¿â...
+2025-08-01 17:21:14,342 - utils.public - INFO - Êý¾Ý¿âÖØÁ¬³É¹¦£¡
+2025-08-01 17:21:14,470 - utils.public - INFO - SQLÓï¾äÖ´ÐÐ³É¹¦
+2025-08-01 17:21:14,530 - werkzeug - INFO - 192.168.112.34 - - [01/Aug/2025 17:21:14] "POST /execute_scenario HTTP/1.1" 200 -
+2025-08-01 17:21:51,538 - werkzeug - INFO - 192.168.112.34 - - [01/Aug/2025 17:21:51] "POST /execute_scenario HTTP/1.1" 200 -
+2025-08-01 17:21:56,257 - utils.public - INFO - ³¢ÊÔÖØÐÂÁ¬½ÓÊý¾Ý¿â...
+2025-08-01 17:21:56,359 - utils.public - INFO - Êý¾Ý¿âÖØÁ¬³É¹¦£¡
+2025-08-01 17:21:56,472 - utils.public - INFO - SQLÓï¾äÖ´ÐÐ³É¹¦
+2025-08-01 17:21:58,640 - werkzeug - INFO - 192.168.112.34 - - [01/Aug/2025 17:21:58] "POST /execute_scenario HTTP/1.1" 200 -
+2025-08-01 17:22:25,440 - utils.public - INFO - Êý¾Ý¿âÁ¬½ÓÕý³£¡£
+2025-08-01 17:22:25,456 - utils.public - INFO - Êý¾Ý¿âÁ¬½ÓÕý³£¡£
+2025-08-01 17:22:25,606 - utils.public - INFO - SQLÓï¾äÖ´ÐÐ³É¹¦
+2025-08-01 17:22:25,626 - werkzeug - INFO - 192.168.112.34 - - [01/Aug/2025 17:22:25] "POST /execute_scenario HTTP/1.1" 200 -
+2025-08-01 17:22:26,601 - utils.public - INFO - ³¢ÊÔÖØÐÂÁ¬½ÓÊý¾Ý¿â...
+2025-08-01 17:22:26,708 - utils.public - INFO - Êý¾Ý¿âÖØÁ¬³É¹¦£¡
+2025-08-01 17:22:26,727 - utils.public - INFO - Êý¾Ý¿âÁ¬½ÓÕý³£¡£
+2025-08-01 17:22:26,886 - utils.public - INFO - SQLÓï¾äÖ´ÐÐ³É¹¦
+2025-08-01 17:22:26,904 - werkzeug - INFO - 192.168.112.34 - - [01/Aug/2025 17:22:26] "POST /execute_scenario HTTP/1.1" 200 -
+2025-08-01 17:22:39,042 - utils.public - INFO - ³¢ÊÔÖØÐÂÁ¬½ÓÊý¾Ý¿â...
+2025-08-01 17:22:39,141 - utils.public - INFO - Êý¾Ý¿âÖØÁ¬³É¹¦£¡
+2025-08-01 17:22:39,255 - utils.public - INFO - SQLÓï¾äÖ´ÐÐ³É¹¦
+2025-08-01 17:22:41,428 - werkzeug - INFO - 192.168.112.34 - - [01/Aug/2025 17:22:41] "POST /execute_scenario HTTP/1.1" 200 -
+2025-08-01 17:23:24,375 - utils.public - INFO - Êý¾Ý¿âÁ¬½ÓÕý³£¡£
+2025-08-01 17:23:24,495 - utils.public - INFO - SQLÓï¾äÖ´ÐÐ³É¹¦
+2025-08-01 17:23:27,637 - werkzeug - INFO - 127.0.0.1 - - [01/Aug/2025 17:23:27] "POST /execute_scenario HTTP/1.1" 200 -
+2025-08-01 17:23:54,145 - utils.public - INFO - Êý¾Ý¿âÁ¬½ÓÕý³£¡£
+2025-08-01 17:23:54,163 - utils.public - INFO - Êý¾Ý¿âÁ¬½ÓÕý³£¡£
+2025-08-01 17:23:54,343 - utils.public - INFO - SQLÓï¾äÖ´ÐÐ³É¹¦
+2025-08-01 17:23:54,360 - werkzeug - INFO - 192.168.112.34 - - [01/Aug/2025 17:23:54] "POST /execute_scenario HTTP/1.1" 200 -
+2025-08-01 17:24:05,805 - utils.public - INFO - ³¢ÊÔÖØÐÂÁ¬½ÓÊý¾Ý¿â...
+2025-08-01 17:24:05,922 - utils.public - INFO - Êý¾Ý¿âÖØÁ¬³É¹¦£¡
+2025-08-01 17:24:06,045 - utils.public - INFO - SQLÓï¾äÖ´ÐÐ³É¹¦
+2025-08-01 17:24:08,206 - werkzeug - INFO - 192.168.112.34 - - [01/Aug/2025 17:24:08] "POST /execute_scenario HTTP/1.1" 200 -
+2025-08-01 17:24:58,222 - utils.public - INFO - Êý¾Ý¿âÁ¬½ÓÕý³£¡£
+2025-08-01 17:24:58,239 - utils.public - INFO - Êý¾Ý¿âÁ¬½ÓÕý³£¡£
+2025-08-01 17:24:58,392 - utils.public - INFO - SQLÓï¾äÖ´ÐÐ³É¹¦
+2025-08-01 17:24:58,408 - werkzeug - INFO - 127.0.0.1 - - [01/Aug/2025 17:24:58] "POST /execute_scenario HTTP/1.1" 200 -
+2025-08-01 17:25:00,492 - utils.public - INFO - ³¢ÊÔÖØÐÂÁ¬½ÓÊý¾Ý¿â...
+2025-08-01 17:25:00,614 - utils.public - INFO - Êý¾Ý¿âÖØÁ¬³É¹¦£¡
+2025-08-01 17:25:00,632 - utils.public - INFO - Êý¾Ý¿âÁ¬½ÓÕý³£¡£
+2025-08-01 17:25:00,705 - utils.public - INFO - SQLÓï¾äÖ´ÐÐ³É¹¦
+2025-08-01 17:25:00,724 - werkzeug - INFO - 127.0.0.1 - - [01/Aug/2025 17:25:00] "POST /execute_scenario HTTP/1.1" 200 -
+2025-08-01 17:44:13,945 - werkzeug - INFO - 127.0.0.1 - - [01/Aug/2025 17:44:13] "GET / HTTP/1.1" 200 -
+2025-08-01 17:44:13,960 - werkzeug - INFO - 127.0.0.1 - - [01/Aug/2025 17:44:13] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-08-01 17:44:13,962 - werkzeug - INFO - 127.0.0.1 - - [01/Aug/2025 17:44:13] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-08-01 17:44:18,999 - werkzeug - INFO - 127.0.0.1 - - [01/Aug/2025 17:44:18] "GET / HTTP/1.1" 200 -
+2025-08-01 17:44:19,014 - werkzeug - INFO - 127.0.0.1 - - [01/Aug/2025 17:44:19] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-08-01 17:44:19,014 - werkzeug - INFO - 127.0.0.1 - - [01/Aug/2025 17:44:19] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-08-01 17:44:51,111 - werkzeug - INFO - 127.0.0.1 - - [01/Aug/2025 17:44:51] "GET / HTTP/1.1" 200 -
+2025-08-01 17:44:51,124 - werkzeug - INFO - 127.0.0.1 - - [01/Aug/2025 17:44:51] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-08-01 17:44:51,124 - werkzeug - INFO - 127.0.0.1 - - [01/Aug/2025 17:44:51] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-08-01 18:43:06,201 - werkzeug - INFO - 127.0.0.1 - - [01/Aug/2025 18:43:06] "GET / HTTP/1.1" 200 -
+2025-08-01 18:43:06,217 - werkzeug - INFO - 127.0.0.1 - - [01/Aug/2025 18:43:06] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-08-01 18:43:06,217 - werkzeug - INFO - 127.0.0.1 - - [01/Aug/2025 18:43:06] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-08-01 18:44:22,678 - werkzeug - INFO - 127.0.0.1 - - [01/Aug/2025 18:44:22] "GET / HTTP/1.1" 200 -
+2025-08-01 18:44:22,691 - werkzeug - INFO - 127.0.0.1 - - [01/Aug/2025 18:44:22] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-08-01 18:44:22,696 - werkzeug - INFO - 127.0.0.1 - - [01/Aug/2025 18:44:22] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-08-01 18:45:22,965 - werkzeug - INFO - 127.0.0.1 - - [01/Aug/2025 18:45:22] "GET / HTTP/1.1" 200 -
+2025-08-01 18:45:22,978 - werkzeug - INFO - 127.0.0.1 - - [01/Aug/2025 18:45:22] "GET /static/css/style.css HTTP/1.1" 200 -
+2025-08-01 18:45:22,979 - werkzeug - INFO - 127.0.0.1 - - [01/Aug/2025 18:45:22] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-08-01 18:45:22,990 - werkzeug - INFO - 127.0.0.1 - - [01/Aug/2025 18:45:22] "[33mGET /static/images/background.png HTTP/1.1[0m" 404 -
+2025-08-01 18:45:30,557 - root - INFO - ¿ªÊ¼Ö´ÐÐµÇÂ¼²Ù×÷
+2025-08-01 18:45:30,622 - root - INFO - µÇÂ¼³É¹¦£¬ÏìÓ¦Êý¾Ý£º{'code': 0, 'message': '²Ù×÷³É¹¦', 'data': {'is_admin': 1, 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NTQwNTk1MjksImlhdCI6MTc1NDA0NTEyOSwiaXNfYWRtaW4iOjEsImlzc3VlciI6ImdvY3JvbiIsInVpZCI6MTMsInVzZXJuYW1lIjoieHVzaGFuZ2NodWFuZyJ9.GpqHcvNq5jFeJENs7fKmewdzQoykDIIBaIrZVJH0268', 'uid': 13, 'username': 'xushangchuang'}}
+2025-08-01 18:45:30,623 - root - INFO - ¿ªÊ¼Ö´ÐÐµÇÂ¼²Ù×÷
+2025-08-01 18:45:30,691 - root - INFO - µÇÂ¼³É¹¦£¬ÏìÓ¦Êý¾Ý£º<Response [200]>
+2025-08-01 18:45:30,692 - root - INFO - CookieÍ·ÐÅÏ¢: XXL_JOB_LOGIN_IDENTITY=7b226964223a312c22757365726e616d65223a2261646d696e222c2270617373776f7264223a226531306164633339343962613539616262653536653035376632306638383365222c22726f6c65223a312c227065726d697373696f6e223a6e756c6c7d
+2025-08-01 18:45:30,692 - werkzeug - INFO - 127.0.0.1 - - [01/Aug/2025 18:45:30] "POST /login HTTP/1.1" 200 -
+2025-08-01 18:45:49,095 - werkzeug - INFO - 127.0.0.1 - - [01/Aug/2025 18:45:49] "GET / HTTP/1.1" 200 -
+2025-08-01 18:45:49,110 - werkzeug - INFO - 127.0.0.1 - - [01/Aug/2025 18:45:49] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-08-01 18:45:49,110 - werkzeug - INFO - 127.0.0.1 - - [01/Aug/2025 18:45:49] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-08-01 18:45:52,367 - root - INFO - ¿ªÊ¼Ö´ÐÐµÇÂ¼²Ù×÷
+2025-08-01 18:45:52,417 - root - INFO - µÇÂ¼³É¹¦£¬ÏìÓ¦Êý¾Ý£º{'code': 0, 'message': '²Ù×÷³É¹¦', 'data': {'is_admin': 1, 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NTQwNTk1NTEsImlhdCI6MTc1NDA0NTE1MSwiaXNfYWRtaW4iOjEsImlzc3VlciI6ImdvY3JvbiIsInVpZCI6MTMsInVzZXJuYW1lIjoieHVzaGFuZ2NodWFuZyJ9.rW0Ptp9c0-21MzJ6BiVZNGcGWcx63T7OFKF7ofv8j04', 'uid': 13, 'username': 'xushangchuang'}}
+2025-08-01 18:45:52,418 - root - INFO - ¿ªÊ¼Ö´ÐÐµÇÂ¼²Ù×÷
+2025-08-01 18:45:52,463 - root - INFO - µÇÂ¼³É¹¦£¬ÏìÓ¦Êý¾Ý£º<Response [200]>
+2025-08-01 18:45:52,463 - root - INFO - CookieÍ·ÐÅÏ¢: XXL_JOB_LOGIN_IDENTITY=7b226964223a312c22757365726e616d65223a2261646d696e222c2270617373776f7264223a226531306164633339343962613539616262653536653035376632306638383365222c22726f6c65223a312c227065726d697373696f6e223a6e756c6c7d
+2025-08-01 18:45:52,464 - werkzeug - INFO - 127.0.0.1 - - [01/Aug/2025 18:45:52] "POST /login HTTP/1.1" 200 -
+2025-08-01 18:46:52,816 - werkzeug - INFO - 127.0.0.1 - - [01/Aug/2025 18:46:52] "GET / HTTP/1.1" 200 -
+2025-08-01 18:46:52,830 - werkzeug - INFO - 127.0.0.1 - - [01/Aug/2025 18:46:52] "[36mGET /static/css/style.css HTTP/1.1[0m" 304 -
+2025-08-01 18:46:52,830 - werkzeug - INFO - 127.0.0.1 - - [01/Aug/2025 18:46:52] "[36mGET /static/js/main.js HTTP/1.1[0m" 304 -
+2025-08-01 18:46:55,746 - root - INFO - ¿ªÊ¼Ö´ÐÐµÇÂ¼²Ù×÷
+2025-08-01 18:46:55,792 - root - INFO - µÇÂ¼³É¹¦£¬ÏìÓ¦Êý¾Ý£º{'code': 0, 'message': '²Ù×÷³É¹¦', 'data': {'is_admin': 1, 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NTQwNTk2MTQsImlhdCI6MTc1NDA0NTIxNCwiaXNfYWRtaW4iOjEsImlzc3VlciI6ImdvY3JvbiIsInVpZCI6MTMsInVzZXJuYW1lIjoieHVzaGFuZ2NodWFuZyJ9.pZGuXNw5JVbKA-ODL9SFd2TV4aNqezDTR_x7MWEw2pw', 'uid': 13, 'username': 'xushangchuang'}}
+2025-08-01 18:46:55,793 - root - INFO - ¿ªÊ¼Ö´ÐÐµÇÂ¼²Ù×÷
+2025-08-01 18:46:55,832 - root - INFO - µÇÂ¼³É¹¦£¬ÏìÓ¦Êý¾Ý£º<Response [200]>
+2025-08-01 18:46:55,833 - root - INFO - CookieÍ·ÐÅÏ¢: XXL_JOB_LOGIN_IDENTITY=7b226964223a312c22757365726e616d65223a2261646d696e222c2270617373776f7264223a226531306164633339343962613539616262653536653035376632306638383365222c22726f6c65223a312c227065726d697373696f6e223a6e756c6c7d
+2025-08-01 18:46:55,833 - werkzeug - INFO - 127.0.0.1 - - [01/Aug/2025 18:46:55] "POST /login HTTP/1.1" 200 -

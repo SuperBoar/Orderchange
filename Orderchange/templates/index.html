@@ -1,0 +1,46 @@
+<!-- ... existing code ... -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>租赁管理系统 - 场景处理器</title>
+    <!-- 引用静态资源 -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h2>系统操作面板</h2>
+
+        <button type="button" id="login-button">登录系统</button>
+
+        <form action="/execute_scenario" method="post">
+            <label for="order_id">订单ID</label>
+            <input type="text" id="order_id" name="order_id" required><br>
+
+            <h3>场景选择</h3>
+            <div class="scenario-buttons">
+                <button type="button" class="scenario-btn" data-scenario="a">账单逾期场景</button>
+                <button type="button" class="scenario-btn" data-scenario="b">归还场景</button>
+                <button type="button" class="scenario-btn" data-scenario="c">租转售场景</button>
+                <button type="button" class="scenario-btn active" data-scenario="d">租用中</button>
+                <button type="button" class="scenario-btn" data-scenario="e">恢复待发货状态</button>
+            </div>
+
+            <div id="scenario-params" style="display: none;">
+                <h4>租用中场景参数</h4>
+                <label>
+                    <input type="checkbox" id="modify_bill_date" name="modify_bill_date">
+                    是否修改账单日时间
+                </label>
+            </div>
+
+            <button type="submit" id="execute-scenario" style="display: none;">执行场景</button>
+        </form>
+    </div>
+
+    <!-- 引用JavaScript文件 -->
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
+<!-- ... existing code ... -->

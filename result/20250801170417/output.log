@@ -1,0 +1,5 @@
+2025-08-01 17:04:17,331 - werkzeug - WARNING -  * Debugger is active!
+2025-08-01 17:04:17,338 - werkzeug - INFO -  * Debugger PIN: 141-886-190
+2025-08-01 17:04:20,443 - werkzeug - INFO - 127.0.0.1 - - [01/Aug/2025 17:04:20] "GET / HTTP/1.1" 200 -
+2025-08-01 17:04:24,123 - werkzeug - INFO - 127.0.0.1 - - [01/Aug/2025 17:04:24] "GET / HTTP/1.1" 200 -
+2025-08-01 17:04:28,404 - werkzeug - INFO - 127.0.0.1 - - [01/Aug/2025 17:04:28] "GET / HTTP/1.1" 200 -

@@ -1,0 +1,56 @@
+/* ... existing code ... */
+
+body {
+    background-color: #f8f9fa;
+    background-image: url('../images/background.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.header {
+    margin-bottom: 30px;
+}
+
+.card {
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.scenario-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.scenario-buttons .btn {
+    flex: 1;
+    min-width: 120px;
+}
+
+.scenario-btn.active {
+    font-weight: bold;
+}
+
+#resultArea {
+    margin-top: 20px;
+}
+
+#loginStatus {
+    min-height: 30px;
+}
+
+.form-label {
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .scenario-buttons {
+        flex-direction: column;
+    }
+    
+    .scenario-buttons .btn {
+        width: 100%;
+    }
+}

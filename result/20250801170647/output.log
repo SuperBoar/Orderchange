@@ -1,0 +1,5 @@
+2025-08-01 17:06:47,712 - werkzeug - WARNING -  * Debugger is active!
+2025-08-01 17:06:47,725 - werkzeug - INFO -  * Debugger PIN: 141-886-190
+2025-08-01 17:06:48,521 - werkzeug - INFO - 127.0.0.1 - - [01/Aug/2025 17:06:48] "GET / HTTP/1.1" 200 -
+2025-08-01 17:06:48,587 - werkzeug - INFO - 127.0.0.1 - - [01/Aug/2025 17:06:48] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-08-01 17:06:58,090 - werkzeug - INFO -  * Detected change in 'D:\\Work\\Project\\Orderchange\\app.py', reloading

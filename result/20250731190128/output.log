@@ -1,0 +1,18 @@
+2025-07-31 19:01:28,121 - root - INFO - 开始执行登录操作
+2025-07-31 19:01:28,172 - root - INFO - 登录成功，响应数据：{'code': 0, 'message': '操作成功', 'data': {'is_admin': 1, 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NTM5NzQwODcsImlhdCI6MTc1Mzk1OTY4NywiaXNfYWRtaW4iOjEsImlzc3VlciI6ImdvY3JvbiIsInVpZCI6MTMsInVzZXJuYW1lIjoieHVzaGFuZ2NodWFuZyJ9.qV3EpRy1Vk9cjr0Yi5B6ei2UxLOaHO58C56qItKytXs', 'uid': 13, 'username': 'xushangchuang'}}
+2025-07-31 19:01:28,172 - root - INFO - 开始执行登录操作
+2025-07-31 19:01:28,223 - root - INFO - 登录成功，响应数据：<Response [200]>
+2025-07-31 19:01:28,223 - root - INFO - Cookie头信息: XXL_JOB_LOGIN_IDENTITY=7b226964223a312c22757365726e616d65223a2261646d696e222c2270617373776f7264223a226531306164633339343962613539616262653536653035376632306638383365222c22726f6c65223a312c227065726d697373696f6e223a6e756c6c7d
+2025-07-31 19:01:44,492 - utils.public - INFO - SQL语句执行成功
+2025-07-31 19:01:51,094 - utils.public - INFO - SQL语句执行成功
+2025-07-31 19:02:05,681 - utils.public - INFO - SQL语句执行成功
+2025-07-31 19:02:12,084 - utils.public - INFO - SQL语句执行成功
+2025-07-31 19:02:26,659 - utils.public - INFO - SQL语句执行成功
+2025-07-31 19:02:32,287 - utils.public - INFO - SQL语句执行成功
+2025-07-31 19:03:07,909 - utils.public - INFO - SQL语句执行成功
+2025-07-31 19:03:16,640 - utils.public - INFO - SQL语句执行成功
+2025-07-31 19:03:26,463 - utils.public - INFO - SQL语句执行成功
+2025-07-31 19:03:34,058 - utils.public - ERROR - 数据库连接无效
+2025-07-31 19:03:41,536 - utils.public - ERROR - 数据库连接无效
+2025-07-31 19:03:43,589 - utils.public - ERROR - 数据库连接无效
+2025-07-31 19:03:54,178 - utils.public - ERROR - 数据库连接无效
