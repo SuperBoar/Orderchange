@@ -6,12 +6,15 @@ def validate_int_input(prompt):
         prompt (str): 提示信息
         
     Returns:
-        int: 用户输入的整数
+        int: 用户输入的正整数
     """
     while True:
         try:
             value = int(input(prompt))
-            return value
+            if value > 0:
+                return value
+            else:
+                print("输入错误，请输入正整数！")
         except ValueError:
             print("输入错误，请输入整数！")
 
