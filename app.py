@@ -72,7 +72,10 @@ def execute_scenario():
                 message = '归还逾期租转售场景执行完成'
                 
         elif scenario == 'd':
-            modify_bill_date = request.form.get('modify_bill_date') == 'on'
+            # 处理modify_bill_date参数，可以是'true'/'false'或'on'/'None'
+            modify_bill_date_str = request.form.get('modify_bill_date', 'false')
+            modify_bill_date = modify_bill_date_str.lower() in ['true', 'on', '1']
+            
             term = request.form.get('term')
             adjust_days = request.form.get('adjust_days')
             
@@ -108,4 +111,4 @@ def health_check():
 
 
 if __name__ == '__main__':
-    app.run(debug=True, host='0.0.0.0', port=5000)
+    app.run(debug=False, host='0.0.0.0', port=5000)

@@ -11,10 +11,10 @@ def validate_int_input(prompt):
     while True:
         try:
             value = int(input(prompt))
-            if value > 0:
+            if value >= 0:
                 return value
             else:
-                print("输入错误，请输入正整数！")
+                print("输入错误，请输入非负整数！")
         except ValueError:
             print("输入错误，请输入整数！")
 
