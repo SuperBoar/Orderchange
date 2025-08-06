@@ -11,9 +11,19 @@ logger = logging.getLogger(__name__)
 
 
 class Public:
+    _instance = None
+    _initialized = False
+
+    def __new__(cls):
+        if cls._instance is None:
+            cls._instance = super(Public, cls).__new__(cls)
+        return cls._instance
+
     def __init__(self):
-        self.conn = None
-        self.logger = logger
+        if not self._initialized:
+            self.conn = None
+            self.logger = logger
+            self._initialized = True
 
     def sql_db(self):
         """创建数据库链接"""
@@ -65,9 +75,13 @@ class Public:
             self.logger.error("输入参数必须是SQL语句列表")
             return False
 
+        # 检查连接是否有效，如果无效则尝试重连
         if not self.conn or not self.conn.is_connected():
-            self.logger.error("数据库连接无效")
-            return False
+            self.logger.warning("数据库连接已断开，尝试重新连接...")
+            if not self.sql_db():
+                self.logger.error("数据库重连失败")
+                return False
+            self.logger.info("数据库重连成功")
 
         try:
             with self.conn.cursor() as cursor:
@@ -88,8 +102,3 @@ class Public:
         if self.conn is None:
             return False
         return self.conn.is_connected()
-
-# if __name__ == '__main__':
-#     db_manager = Public()
-#     # db_manager.sql_db()
-#     db_manager.close_connection()

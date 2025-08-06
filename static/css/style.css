@@ -45,6 +45,18 @@ body {
     font-weight: bold;
 }
 
+/* 登录提示信息样式 */
+.login-section {
+    display: flex;
+    align-items: flex-end; /* 确保子元素底部对齐 */
+}
+
+#loginPrompt {
+    color: red;
+    font-size: small;
+    margin-left: 10px; /* 调整按钮与提示信息之间的间距 */
+}
+
 @media (max-width: 768px) {
     .scenario-buttons {
         flex-direction: column;

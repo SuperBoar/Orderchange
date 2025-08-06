@@ -27,14 +27,13 @@ class LogIn:
 
         try:
             # 根据登录方式选择请求方法
-            method = "POST" if longin_way == "GO_LONGIN_URL" else "POST1"
+            method = "POST" if longin_way == "GO_LONGIN_URL" else "POST_FORM"
             url = self.read_config.get_http(longin_way)
 
             login_response = self.request.web_main(url, method, data=login_info)
 
         except Exception as e:
             self.logger.error(f"网络请求异常: {e}")
-            print(f"网络请求异常: {e}")
             return None
 
         # 根据登录方式处理响应
@@ -57,7 +56,6 @@ class LogIn:
             return response["data"]["token"]
         else:
             self.logger.error(f"登录失败，响应数据：{response}")
-            print(f"登录失败，响应数据：{response}")
             return None
 
     def _handle_java_login_response(self, response):
@@ -76,7 +74,6 @@ class LogIn:
         cookie_header = "; ".join(cookie_list)
 
         self.logger.info(f"Cookie头信息: {cookie_header}")
-        print(f"Cookie头信息: {cookie_header}")
         return cookie_header
 
 

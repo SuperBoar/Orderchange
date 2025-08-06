@@ -1,49 +1,57 @@
-import logging
-
+from common.log import MyLog as Log
 import requests
 
 class Request:
+    def __init__(self):
+        self.logger = Log.get_log().get_logger()
+        
     def send_get(self, url, data = None,headers = None):
         res = requests.get(url=url,data = data, headers=headers).json()
-        print(res)
+        self.logger.debug(f"GET请求返回结果: {res}")
         return res
 
     def send_post(self, url, data = None, headers = None):
         res = requests.post(url=url, data=data, headers=headers).json()
-        print( res)
+        self.logger.debug(f"POST请求返回结果: {res}")
         return res
 
-    def send_post1(self, url, data, headers = None):
+    def send_post_form(self, url, data, headers = None):
         res = requests.post(url=url, data=data)
+        self.logger.debug("POST_FORM请求完成")
         return res
 
     def send_options(self, url, data, headers = None):
         res = requests.options(url=url, params=data).json()
+        self.logger.debug("OPTIONS请求完成")
         return res
 
     def web_main(self, url, method, data=None, headers = None):
 
         # 支持的方法列表
-        supported_methods = ['GET', 'POST','POST1', 'OPTIONS']
+        supported_methods = ['GET', 'POST', 'POST_FORM', 'OPTIONS']
 
         # 检查 method 是否有效
         if method.upper() not in supported_methods:
-            raise ValueError(f"不支持的请求方法：'{method}'. 支持的请求方法： {supported_methods}.")
+            error_msg = f"不支持的请求方法：'{method}'. 支持的请求方法： {supported_methods}."
+            self.logger.error(error_msg)
+            raise ValueError(error_msg)
 
         # 使用映射来选择合适的方法
         method_to_function = {
             'GET': self.send_get,
             'POST': self.send_post,
-            'POST1': self.send_post1,
+            'POST_FORM': self.send_post_form,
             'OPTIONS': self.send_options
         }
 
         try:
             # 根据 method 选择合适的方法并执行
+            self.logger.info(f"发送{method}请求到{url}")
             res = method_to_function[method.upper()](url, data,headers)
+            self.logger.info(f"{method}请求成功完成")
         except Exception as e:
             # 异常处理
-            logging.error(f"发生错误，错误信息: {e}")
+            self.logger.error(f"发生错误，错误信息: {e}")
             res = None
 
         return res
