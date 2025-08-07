@@ -44,6 +44,7 @@ class OrderChange:
                 print("b: 归还场景")
                 print("c: 租转售场景")
                 print("d: 租用中")
+                print("f: 生成代扣参数")
                 print("e: 恢复待发货状态（只用于首期+保证金支付，其他未支付订单）")
                 print("q: 退出系统")
 
@@ -61,6 +62,8 @@ class OrderChange:
                         self._handle_scenario_d(order_id)
                     elif choice == 'e':
                         self._handle_scenario_e(order_id)
+                    elif choice == 'f':
+                        self._handle_scenario_f(order_id)
                     elif choice == 'q':
                         logger.info("用户退出系统")
                         print("\n感谢使用，系统退出！")
@@ -185,6 +188,19 @@ class OrderChange:
             logger.warning(f"订单 {order_id} 的恢复待发货场景执行失败")
             print("数据修改失败！")
 
+    def _handle_scenario_f(self, order_id):
+        """生成代扣参数"""
+        logger.info(f"处理订单 {order_id} 生成代扣参数场景")
+        print("\n===== 生成代扣参数场景 =====")
+        
+        try:
+            print("正在执行操作...")
+            self.order_service.execute_scenario_f()
+            logger.info(f"订单 {order_id} 的生成代扣参数场景执行完成")
+            print("操作执行完成！")
+        except Exception as e:
+            logger.error(f"订单 {order_id} 的生成代扣参数场景执行失败: {e}")
+            print(f"操作执行失败: {e}")
 
 if __name__ == "__main__":
     app = OrderChange()

@@ -108,6 +108,11 @@ def execute_scenario():
             result = order_service.execute_scenario_e(order_id)
             message = '恢复待发货状态场景执行完成'
             
+        elif scenario == 'f':
+            order_service.execute_scenario_f()
+            result = True
+            message = '生成代扣参数场景执行完成'
+            
         if result:
             logger.info(f"订单 {order_id} 场景 {scenario} 执行成功")
             return jsonify({'success': True, 'message': f'{message} - 数据修改成功！'})

@@ -52,7 +52,8 @@ class OrderRepository:
             f"update bajiezu.`order_bill` set `status` = '10' where order_id = '{order_id}' and now_lease_term < {term}",
             f"update bajiezu.`order_bill` set `status` = '0' where order_id = '{order_id}' and now_lease_term >= {term}",
             f"UPDATE `bajiezu`.`order_bill` SET `bill_due_date` = CURDATE() - INTERVAL {overdue_days} DAY "
-            f"WHERE order_id = '{order_id}' and now_lease_term = {term}"
+            f"WHERE order_id = '{order_id}' and now_lease_term = {term}",
+            f"DELETE FROM `bajiezu`.`order_bill_payable_detail` WHERE order_id = '{order_id}' and type = 4"
         ]
         return self.db_manager.execute_sql_list(sql_list)
 
@@ -75,7 +76,8 @@ class OrderRepository:
             f"UPDATE `bajiezu`.`order_bill` SET `status` = '0',`bill_due_date` = CURDATE() - INTERVAL {overdue_days + 7} DAY "
             f"WHERE order_id = '{order_id}' and now_lease_term = {term}",
             f"update bajiezu.order_info set rent_start_time = DATE_SUB(rent_start_time, INTERVAL 1 YEAR),"
-            f"rent_end_time = CURDATE() - INTERVAL {overdue_days} DAY WHERE order_id ='{order_id}'"
+            f"rent_end_time = CURDATE() - INTERVAL {overdue_days} DAY WHERE order_id ='{order_id}'",
+            f"DELETE FROM `bajiezu`.`order_bill_payable_detail` WHERE order_id = '{order_id}' and type = 4"
         ]
         return self.db_manager.execute_sql_list(sql_list)
 
@@ -94,13 +96,16 @@ class OrderRepository:
         """执行租用中场景的SQL语句"""
         sql_list = [
             f"update bajiezu.`order` set order_status = '50', sub_status = '50' where order_id = '{order_id}'",
-            f"UPDATE `bajiezu`.`order_bill` SET `status` = '10' where order_id = '{order_id}' and now_lease_term < {term}"
+            f"UPDATE `bajiezu`.`order_bill` SET `status` = '10' where order_id = '{order_id}' and now_lease_term = 1"
         ]
 
         if modify_bill_date and term is not None and adjust_days is not None:
             sql_list.append(
                 f"UPDATE `bajiezu`.`order_bill` SET `bill_due_date` = CURDATE() + INTERVAL {adjust_days} DAY "
                 f"WHERE order_id = '{order_id}' and now_lease_term = {term}"
+            )
+            sql_list.append(
+                f"UPDATE `bajiezu`.`order_bill` SET `status` = '10' where order_id = '{order_id}' and now_lease_term < {term}"
             )
         
         return self.db_manager.execute_sql_list(sql_list)
@@ -113,6 +118,7 @@ class OrderRepository:
         sql_list = [
             f"update bajiezu.`order` set order_status = 40, sub_status = 40 where order_id = '{order_id}'",
             f"update bajiezu.`order_bill` set `status` = '0' where order_id = '{order_id}' and now_lease_term > 1",
+            f"update bajiezu.`order_bill` set `status` = '10' where order_id = '{order_id}' and now_lease_term = 1",
             f"delete from bajiezu.`order_bill` where order_id = '{order_id}' and type = 2",
             f"delete from bajiezu.`order_overdue_rent_resale_record` WHERE order_id = '{order_id}'",
             f"DELETE FROM `bajiezu`.`order_return_overdue` WHERE order_id = '{order_id}'",

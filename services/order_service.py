@@ -33,6 +33,10 @@ class OrderService:
         # 执行SQL
         result = self.order_repository.execute_scenario_a_sql(order_id, term, overdue_days)
 
+        # 检查SQL执行结果，只有执行成功才触发接口
+        if not result:
+            raise Exception("SQL执行失败，请检查日志!")
+
         # 触发接口
         self.request.web_main(
             self.read_config.get_http("GO_URL1"), 
@@ -48,6 +52,9 @@ class OrderService:
         """
         # 执行SQL
         result = self.order_repository.execute_scenario_b_sql(order_id, return_days)
+        # 检查SQL执行结果，只有执行成功才触发接口
+        if not result:
+            raise Exception("SQL执行失败，请检查日志!")
 
         # 触发接口
         self.request.web_main(
@@ -74,6 +81,10 @@ class OrderService:
 
         # 执行SQL
         result = self.order_repository.execute_scenario_c_x_sql(order_id, term, overdue_days)
+        
+        # 检查SQL执行结果，只有执行成功才触发接口
+        if not result:
+            raise Exception("SQL执行失败，请检查日志!")
 
         # 触发接口
         self.request.web_main(
@@ -100,6 +111,10 @@ class OrderService:
         # 执行SQL
         result = self.order_repository.execute_scenario_c_y_sql(order_id, overdue_days)
         
+        # 检查SQL执行结果，只有执行成功才触发接口
+        if not result:
+            raise Exception("SQL执行失败，请检查日志!")
+
         # 触发接口
         self.request.web_main(
             self.read_config.get_http("GO_URL2"), 
@@ -146,3 +161,13 @@ class OrderService:
         # 执行SQL
         result = self.order_repository.execute_scenario_e_sql(order_id)
         return result
+
+    def execute_scenario_f(self):
+        """
+        生成代扣参数
+        """
+        self.request.web_main(
+            self.read_config.get_http("JAVA_URL3"),
+            "post",
+            headers={"cookie": self.java_cookie}
+        )
