@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, jsonify, redirect, url_for
+from flask import Flask, render_template, request, jsonify, redirect, url_for, send_from_directory
 import sys
 import os
 
@@ -8,7 +8,7 @@ sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 from services.order_service import OrderService
 from common.log import MyLog as Log
 
-app = Flask(__name__)
+app = Flask(__name__, static_url_path='/static')
 app.secret_key = 'your-secret-key-here'  # 在生产环境中应该使用环境变量
 
 # 初始化订单服务
@@ -21,6 +21,13 @@ logger = Log.get_log().get_logger()
 with app.app_context():
     if not order_service.order_repository._ensure_connection():
         logger.warning("数据库连接失败，请检查数据库配置！")
+
+
+@app.route('/favicon.ico')
+def favicon():
+    """处理 favicon 请求"""
+    return send_from_directory(os.path.join(app.root_path, 'static'),
+                               'favicon.ico', mimetype='image/vnd.microsoft.icon')
 
 
 @app.route('/')
