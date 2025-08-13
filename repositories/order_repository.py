@@ -110,11 +110,12 @@ class OrderRepository:
         
         return self.db_manager.execute_sql_list(sql_list)
 
-    def execute_scenario_e_sql(self, order_id):
-        """执行恢复待发货场景的SQL语句"""
-        if not self._ensure_connection():
-            return False
+    def execute_scenario_e_sql(self, order_id, paid_deposit=False):
+        """执行恢复待发货场景的SQL语句，根据保证金支付状态执行不同操作"""
+        # if not self._ensure_connection():
+        #     return False
         
+        # 基础SQL语句（无论是否支付保证金都需要执行）
         sql_list = [
             f"update bajiezu.`order` set order_status = 40, sub_status = 40 where order_id = '{order_id}'",
             f"update bajiezu.`order_bill` set `status` = '0' where order_id = '{order_id}' and now_lease_term > 1",
@@ -124,6 +125,14 @@ class OrderRepository:
             f"DELETE FROM `bajiezu`.`order_return_overdue` WHERE order_id = '{order_id}'",
             f"DELETE FROM `bajiezu`.`order_bill_payable_detail` WHERE order_id = '{order_id}' and type = 4"
         ]
-        result = self.db_manager.execute_sql_list(sql_list)
-        self.close_connection()  # 确保操作完成后关闭连接
-        return result
+        
+        # 根据是否支付保证金添加额外的SQL语句
+        if paid_deposit:
+            # 已支付履约保证金的情况
+            sql_list.append(f"update bajiezu.`order_prepayment` set `balance`= amount where order_id = '{order_id}'")
+        else:
+            # 未支付履约保证金的情况
+            sql_list.append(f"update bajiezu.`order_prepayment` set `balance` = 0 where order_id = '{order_id}'")
+        
+        return self.db_manager.execute_sql_list(sql_list)
+        # self.close_connection()  # 确保操作完成后关闭连接

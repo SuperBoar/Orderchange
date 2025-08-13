@@ -150,16 +150,18 @@ class OrderService:
         
         return result
 
-    def execute_scenario_e(self, order_id):
+    def execute_scenario_e(self, order_id, paid_deposit=False):
         """
         恢复待发货场景处理
+        
+        Args:
+            order_id (str): 订单ID
+            paid_deposit (bool): 是否已支付履约保证金，默认为False
+                True: 已支付履约保证金
+                False: 未支付履约保证金
         """
-        # 确保数据库连接有效
-        if not self.order_repository._ensure_connection():
-            raise Exception("数据库连接失败，请联系管理员检查配置信息！")
-
         # 执行SQL
-        result = self.order_repository.execute_scenario_e_sql(order_id)
+        result = self.order_repository.execute_scenario_e_sql(order_id, paid_deposit)
         return result
 
     def execute_scenario_f(self):

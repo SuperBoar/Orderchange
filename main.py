@@ -179,8 +179,12 @@ class OrderChange:
         logger.info(f"处理订单 {order_id} 的恢复待发货场景")
         print("\n===== 租转售恢复租用中场景 =====")
         
+        # 询问履约保证金支付状态
+        paid_choice = validate_yes_no("是否已支付履约保证金? (y/n): ")
+        paid_deposit = (paid_choice == 'y')
+        
         print("正在执行操作...")
-        result = self.order_service.execute_scenario_e(order_id)
+        result = self.order_service.execute_scenario_e(order_id, paid_deposit)
         if result:
             logger.info(f"订单 {order_id} 的恢复待发货场景执行成功")
             print("数据修改成功！")

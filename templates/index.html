@@ -170,7 +170,8 @@
                     }
                     break;
                 case 'e':
-                    // 无需额外参数
+                    const paidDeposit = $('#paidDepositCheckbox').is(':checked');
+                    formData.append('paid_deposit', paidDeposit);
                     break;
                 case 'f':
                     // 无需额外参数
@@ -321,8 +322,11 @@
             case 'e':
                 paramsHtml = `
                     <div class="card p-3">
-                        <h5>恢复待发货场景</h5>
-                        <p>该场景无需额外参数</p>
+                        <h5>恢复待发货状态</h5>
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="paidDepositCheckbox">
+                            <label class="form-check-label" for="paidDepositCheckbox">是否已支付履约保证金</label>
+                        </div>
                     </div>
                 `;
                 break;

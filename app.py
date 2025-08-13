@@ -112,7 +112,11 @@ def execute_scenario():
             message = '租用中场景执行完成'
             
         elif scenario == 'e':
-            result = order_service.execute_scenario_e(order_id)
+            # 获取履约保证金支付状态参数，默认为False（未支付）
+            paid_deposit_str = request.form.get('paid_deposit', 'false')
+            paid_deposit = paid_deposit_str.lower() in ['true', 'on', '1']
+            
+            result = order_service.execute_scenario_e(order_id, paid_deposit)
             message = '恢复待发货状态场景执行完成'
             
         elif scenario == 'f':
