@@ -85,9 +85,9 @@ class OrderRepository:
         """执行归还逾期租转售场景的SQL语句"""
         sql_list = [
             f"update bajiezu.`order` set order_status = 50, sub_status = 50 where order_id = '{order_id}'",
-            f"update bajiezu.`order_bill` set `status` = '10' where order_id = '{order_id}'",
+            f"update bajiezu.`order_bill` set `status` = '10' where order_id = '{order_id}' and type NOT IN ('2','5')",
             f"update order_prepayment set balance = amount, `status`=10 WHERE order_id = '{order_id}'",
-            f"update bajiezu.order_info set rent_start_time = DATE_SUB(rent_start_time, INTERVAL 1 YEAR),"
+            f"update bajiezu.order_info set rent_start_time = DATE_SUB(created_at, INTERVAL 1 YEAR),"
             f"rent_end_time = CURDATE() - INTERVAL {overdue_days} DAY WHERE order_id = '{order_id}'"
         ]
         return self.db_manager.execute_sql_list(sql_list)
