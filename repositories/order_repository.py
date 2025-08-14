@@ -63,7 +63,7 @@ class OrderRepository:
             f"update bajiezu.`order` set order_status = 50, sub_status = 50 where order_id = '{order_id}'",
             f"update bajiezu.`order_bill` set `status` = '10' where order_id = '{order_id}'",
             f"update order_prepayment set balance = amount, `status`=10 WHERE order_id = '{order_id}'",
-            f"update bajiezu.order_info set rent_start_time = DATE_SUB(rent_start_time, INTERVAL 1 YEAR),"
+            f"update bajiezu.order_info set rent_start_time = DATE_SUB(created_at, INTERVAL 1 YEAR),"
             f"rent_end_time = CURDATE() + INTERVAL {return_days} DAY WHERE order_id = '{order_id}'"
         ]
         return self.db_manager.execute_sql_list(sql_list)
@@ -75,7 +75,7 @@ class OrderRepository:
             f"update bajiezu.`order_bill` set `status` = '10' where order_id = '{order_id}' and now_lease_term < {term}",
             f"UPDATE `bajiezu`.`order_bill` SET `status` = '0',`bill_due_date` = CURDATE() - INTERVAL {overdue_days + 7} DAY "
             f"WHERE order_id = '{order_id}' and now_lease_term = {term}",
-            f"update bajiezu.order_info set rent_start_time = DATE_SUB(rent_start_time, INTERVAL 1 YEAR),"
+            f"update bajiezu.order_info set rent_start_time = DATE_SUB(created_at, INTERVAL 1 YEAR),"
             f"rent_end_time = CURDATE() - INTERVAL {overdue_days} DAY WHERE order_id ='{order_id}'",
             f"DELETE FROM `bajiezu`.`order_bill_payable_detail` WHERE order_id = '{order_id}' and type = 4"
         ]
