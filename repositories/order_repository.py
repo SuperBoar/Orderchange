@@ -107,6 +107,9 @@ class OrderRepository:
             sql_list.append(
                 f"UPDATE `bajiezu`.`order_bill` SET `status` = '10' where order_id = '{order_id}' and now_lease_term < {term}"
             )
+            sql_list.append(
+                f"UPDATE `bajiezu`.`order_bill` SET `status` = '0' where order_id = '{order_id}' and now_lease_term = {term}"
+            )
         
         return self.db_manager.execute_sql_list(sql_list)
 
